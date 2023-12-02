@@ -1,0 +1,66 @@
+{
+    "name": "advent",
+    "version": "1.0.0",
+    "description": "code",
+    "main": "src/index.js",
+    "type": "module",
+    "scripts":{
+        "test": "jest"
+    },
+    "author": "jerry",
+    "license": "ISC",
+    "dependencies": {
+        "algebrite": "^1.4.0",
+        "axios": "^0.24.0",
+        "babel-jest": "^29.3.1",
+        "dotenv": "^10.0.0",
+        "fs": "0.0.1-security",
+        "jest": "^29.3.1",
+        "jest-extended": "^3.2.0",
+        "lodash": "^4.17.21",
+        "mathjs": "^10.6.4",
+        "polynomial": "^1.4.5",
+        "require": "^2.4.20"
+    },
+    "devDendencies": {
+        "@babel/core": "^7.20.5",
+        "@babel/preset-env": "^7.20.2",
+        "@types/jest": "^29.2.4",
+        "mathjs": "^10.6.4",
+        "ts-jest": "^29.0.3"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ]
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "rootDir": "src",
+        "collectCoverageFrom": [
+            "**/*.js",
+            "!**/config/**/*.js",
+            "!src/scripts/*"
+        ],
+        "coverageReporters": [
+            "lcov",
+            "json",
+            "text"
+        ],
+        "coverageDirectory": "../coverage",
+        "transform": {
+            "^.+\\.[t|j]s?$": "babel-jest"
+        },
+        "transformIgnorePatterns": [
+            "node_modules/(?!variables/.*)"
+        ],
+        "setupFilesAfterEnv": [
+            "jest-extended"
+        ]
+    }
+}
