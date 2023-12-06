@@ -1,3 +1,2 @@
-// import {day} from "./2023/days/day02.js";
-
-// day02();
+import {day} from "./2023/days/day05.js";
+day(5);

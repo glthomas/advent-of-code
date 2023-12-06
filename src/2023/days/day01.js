@@ -64,7 +64,3 @@ export function star(rawData, inArr, star){
 
     // console.log(`star2: ${_.sum(firstPlusLast)}`)
 }
-
-// export function star1and2(rawData, inArr, star){
-
-// }

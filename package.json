@@ -4,7 +4,7 @@
     "description": "code",
     "main": "src/index.js",
     "type": "module",
-    "scripts":{
+    "scripts": {
         "test": "jest"
     },
     "author": "jerry",
@@ -31,12 +31,14 @@
     },
     "babel": {
         "presets": [
-            "@babel/preset-env",
-            {
-                "targets": {
-                    "node": "current"
+            [
+                "@babel/preset-env",
+                {
+                    "targets": {
+                        "node": "current"
+                    }
                 }
-            }
+            ]
         ]
     },
     "jest": {
@@ -62,5 +64,8 @@
         "setupFilesAfterEnv": [
             "jest-extended"
         ]
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.23.5"
     }
 }
